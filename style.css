@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    background-color:rgb(153, 145, 119);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    /* 525+15+15 */
+    width: 555px;
+    /* 350px+15px+15=380px */
+    height: 380px;
+    position: relative;
+}
+
+.bg{
+    width: 525px;
+    /* size of forest is 1050x350 therefore the width is 1050/2 */
+    height: 350px;
+    border-radius: 50%;
+    border: solid 15px rgb(126, 117, 109);
+    position: absolute;
+    background: url(./forest.jpg);
+    background-position: 100% 0%;
+    animation: moveBg 10s linear infinite;
+}
+
+.walker{
+    position: absolute;
+    transform: scale(0.5);
+    bottom: -50px;
+    left: 30px;
+}
+
+@keyframes moveBg{
+0%{
+    background-position: 100% 0%;
+}
+100%{
+    background-position: 0% 0%;
+}
+}
